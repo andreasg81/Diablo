@@ -14,5 +14,6 @@ class item():
         }
         try:
             result = mongo.db.items.insert_one(newThing)
+            print(result)
         except pymongo.errors.DuplicateKeyError:
             flash('Item gibt es schon!')
