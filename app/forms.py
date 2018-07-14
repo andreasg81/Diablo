@@ -3,7 +3,7 @@ from wtforms import StringField, BooleanField, SubmitField, SelectMultipleField,
 from wtforms.validators import DataRequired
 from config import Config
 
-
+#TODO Form für Einschrencken bauen
 class ItemForm(FlaskForm):
     itemname = StringField('Item', validators=[DataRequired()])
     avaclass = SelectMultipleField('Charakter', choices=Config.AVATARS)

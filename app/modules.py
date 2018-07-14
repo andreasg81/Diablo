@@ -17,3 +17,6 @@ class item():
             print(result)
         except pymongo.errors.DuplicateKeyError:
             flash('Item gibt es schon!')
+    def read_items(self):
+        #TODO lesen einbauen
+        pass

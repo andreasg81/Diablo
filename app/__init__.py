@@ -9,3 +9,8 @@ bootstrap = Bootstrap(app)
 mongo = PyMongo(app)
 
 from app import routes
+
+
+#Sonstiges:
+#TODO Fehlermeldung raufverschieben
+#TODO Seite für Anzeige bauen
