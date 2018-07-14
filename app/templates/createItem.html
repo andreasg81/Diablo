@@ -1,0 +1,17 @@
+{% block content %}
+<div class="container">
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.itemname.label }}
+            {{ form.itemname(size=32) }}
+            {{ form.avaclass.label }}
+            {{ form.avaclass() }}
+            {{ form.itemclass.label }}
+            {{ form.itemclass() }}
+            {{ form.have_it() }} {{ form.have_it.label }}
+            {{ form.submit() }}
+        </p>
+    </form>
+</div>
+{% endblock %}
