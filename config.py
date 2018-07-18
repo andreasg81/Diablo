@@ -7,7 +7,7 @@ class Config(object):
         ('Barbar', 'Barbar'),
         ('Dämonenjäger', 'Dämonenjäger'),
         ('Hexendoktor', 'Hexendoktor'),
-        ('Kreuzritter', 'Kreizritter'),
+        ('Kreuzritter', 'Kreuzritter'),
         ('Mönch', 'Mönch'),
         ('Totenbeschörer','Totenbeschörer'),
         ('Zauberer', 'Zauberer')

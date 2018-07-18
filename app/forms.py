@@ -10,3 +10,8 @@ class ItemForm(FlaskForm):
     itemclass = SelectField('Art', choices=Config.ITEM_KIND)
     have_it = BooleanField('Vorhanden')
     submit = SubmitField('Speichern')
+
+class FilterItem(FlaskForm):
+    avaclass = SelectField('Charakter', choices=Config.AVATARS)
+    have_it = BooleanField('Vorhanden')
+    submit = SubmitField('Filtern')
