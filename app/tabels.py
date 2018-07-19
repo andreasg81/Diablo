@@ -1,4 +1,4 @@
-from flask_table import Table, Col, BoolCol
+from flask_table import Table, Col, BoolCol, ButtonCol
 
 class ItemTable(Table):
     classes = ['table table-striped']
@@ -7,4 +7,6 @@ class ItemTable(Table):
     art = Col('Klasse')
     kind = Col('Art')
     haveit = BoolCol('Vorhanden', yes_display='ja', no_display='nein')
+    changeit = ButtonCol('ändern', 'update', url_kwargs=dict(id = "_id",richtung="haveit"))
+
 

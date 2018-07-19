@@ -23,3 +23,6 @@ class item():
     def filter(self, was):
         dinge = mongo.db.items.find(was)
         return dinge
+    def update(self,id, richtung):
+        dinge = mongo.db.items.update_one({"_id":id},{"$set":{"haveit":richtung}})
+        return dinge

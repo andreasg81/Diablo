@@ -23,3 +23,12 @@ def index():
     tabel = ItemTable(dinge)
     return render_template('index.html', title='Home', form=form, form2=form2, tabel=tabel)
 
+@app.route('/update/<id>/<richtung>', methods=['POST'])
+def update(id,richtung):
+    updateItem = item()
+    if richtung == "True":
+        updateItem.update(id, False)
+    else:
+        updateItem.update(id, True)
+    flash("Item " + id + " wurde geändert! " + richtung)
+    return redirect('/index')

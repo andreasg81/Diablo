@@ -5,6 +5,7 @@ from flask_pymongo import PyMongo
 
 
 app = Flask(__name__)
+app.debug = True
 app.config.from_object(Config)
 bootstrap = Bootstrap(app)
 mongo = PyMongo(app)
