@@ -3,9 +3,11 @@
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
-            {{ form2.avaclass.label }}
-            {{ form2.avaclass() }}
-            {{ form2.have_it() }} {{ form.have_it.label }}
+            {{ form2.filt_avaclass.label }}
+            {{ form2.filt_avaclass() }}
+            {{ form2.filt_itemclass.label }}
+            {{ form2.filt_itemclass() }}
+            {{ form2.filt_have_it() }}
             {{ form2.submit() }}
         </p>
     </form>

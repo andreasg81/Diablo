@@ -3,6 +3,7 @@ from wtforms import StringField, BooleanField, SubmitField, SelectMultipleField,
 from wtforms.validators import DataRequired
 from config import Config
 
+
 #TODO Form für Einschrencken bauen
 class ItemForm(FlaskForm):
     itemname = StringField('Item', validators=[DataRequired()])
@@ -12,6 +13,7 @@ class ItemForm(FlaskForm):
     submit = SubmitField('Speichern')
 
 class FilterItem(FlaskForm):
-    avaclass = SelectField('Charakter', choices=Config.AVATARS)
-    have_it = BooleanField('Vorhanden')
+    filt_avaclass = SelectField('Charakter', choices=[('Alle', 'Alle')] + Config.AVATARS)
+    filt_itemclass = SelectField('Art', choices=[('Alle', 'Alle')] + Config.ITEM_KIND)
+    filt_have_it = SelectField('Vorhanden', choices=[('Alle', 'Alle'), ('Vorhanden', 'Vorhanden'), ('Fehlt', 'Fehlt')])
     submit = SubmitField('Filtern')
