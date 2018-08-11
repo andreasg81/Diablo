@@ -56,3 +56,10 @@ def update(id,richtung):
         updateItem.update(id, True)
     flash("Item " + id + " wurde geändert! " + richtung)
     return redirect('/index')
+
+@app.route('/delete/<id>', methods=['POST'])
+def deleteit(id):
+    updateItem = item()
+    updateItem.deleteit(id)
+    flash("Item " + id + " wurde gelöscht!")
+    return redirect('/index')

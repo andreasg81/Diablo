@@ -13,9 +13,9 @@ class item():
         }
         try:
             result = mongo.db.items.insert_one(newThing)
-            print(result)
         except pymongo.errors.DuplicateKeyError:
             flash('Item gibt es schon!')
+            result = mongo.db.items.update_one({"_id":itemname},{"$addToSet":{"art":ava[0]}})
     def read_items(self):
         #TODO lesen einbauen ( in arbeit)
         dinge = mongo.db.items.find()
@@ -25,4 +25,7 @@ class item():
         return dinge
     def update(self,id, richtung):
         dinge = mongo.db.items.update_one({"_id":id},{"$set":{"haveit":richtung}})
+        return dinge
+    def deleteit(self,id):
+        dinge = mongo.db.items.delete_one({"_id":id})
         return dinge

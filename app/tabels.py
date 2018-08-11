@@ -8,5 +8,6 @@ class ItemTable(Table):
     kind = Col('Art')
     haveit = BoolCol('Vorhanden', yes_display='ja', no_display='nein')
     changeit = ButtonCol('ändern', 'update', url_kwargs=dict(id = "_id",richtung="haveit"))
+    deleteit = ButtonCol('löschen', 'deleteit', url_kwargs=dict(id="_id"))
 
 
